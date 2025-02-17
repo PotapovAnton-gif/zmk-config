@@ -2,6 +2,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/mouse.h>
 
 / {
     behaviors {
@@ -22,6 +23,19 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <50>;
+        };
+        scroll_mode: scroll_mode {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SCROLL_MODE";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            bindings = <&mo>, <&scroll_mode_activate>;
+        };
+        scroll_mode_activate: scroll_mode_activate {
+            compatible = "zmk,behavior-mouse-scroll";
+            label = "SCROLL_MODE_ACTIVATE";
+            #binding-cells = <0>;
         };
     };
 
