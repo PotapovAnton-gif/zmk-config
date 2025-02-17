@@ -45,12 +45,15 @@
         };
 
         mouse_forward {
-            bindings = <&mkp MB5>;
+            bindings = <&sensor_joystick_scroll>;
             key-positions = <42 43>;
         };
     };
 
     keymap {
+        &anin0 {
+                input-processors = <&zip_xy_to_scroll_mapper>;
+                };
         compatible = "zmk,keymap";
 
         default_layer {

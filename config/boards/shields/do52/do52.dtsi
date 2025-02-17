@@ -1,27 +1,6 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <dt-bindings/zmk/mouse.h>
-#include <dt-bindings/input/input-event-codes.h>
-
-/ {
-    analog_joystick {
-        compatible = "zmk,analog-joystick";
-        io-channels = <&adc 0>, <&adc 1>;  // Используем ADC0 (X) и ADC1 (Y)
-        x-translation = <MOUSE_X>;
-        y-translation = <MOUSE_Y>;
-        deadzone = <5>;  // Игнорируем небольшие движения
-    };
-
-    sensor_joystick_scroll {
-        compatible = "zmk,analog-joystick";
-        io-channels = <&adc 0>, <&adc 1>;
-        x-translation = <MS_WH_LEFT>;
-        y-translation = <MS_WH_UP>;
-    };
-};
-
-&adc {
-    status = "okay";
-};
+#include <dt-bindings/zmk/inputs.h>
 
 / {
     chosen {
