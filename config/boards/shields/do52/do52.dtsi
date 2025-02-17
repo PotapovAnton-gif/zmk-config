@@ -47,9 +47,7 @@
             , <INPUT_REL_X INPUT_REL_HWHEEL>
             ;
     };
-};
 
-{
     chosen {
         zmk,kscan = &kscan0;
         zmk,matrix_transform = &default_transform;
