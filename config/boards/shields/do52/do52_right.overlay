@@ -40,8 +40,8 @@
 	};
     zip_xy_to_scroll_mapper: zip_xy_to_scroll_mapper {
         compatible = "zmk,code-mapper";
-        map = <INPUT_EVENT_MOVEMENT_Y>, <SCROLL_UP>,
-              <INPUT_EVENT_MOVEMENT_X>, <SCROLL_LEFT>;
+        map = <INPUT_REL_Y>, <INPUT_REL_WHEEL>,
+              <INPUT_REL_X>, <INPUT_REL_HWHEEL>;
     };
 };
 
