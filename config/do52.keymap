@@ -1,8 +1,8 @@
+#include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/mouse.h>
 
 / {
     behaviors {
@@ -24,6 +24,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <50>;
         };
+
         scroll_mode: scroll_mode {
             compatible = "zmk,behavior-hold-tap";
             label = "SCROLL_MODE";
@@ -32,6 +33,7 @@
             quick-tap-ms = <0>;
             bindings = <&mo>, <&scroll_mode_activate>;
         };
+
         scroll_mode_activate: scroll_mode_activate {
             compatible = "zmk,behavior-mouse-scroll";
             label = "SCROLL_MODE_ACTIVATE";
@@ -50,6 +52,21 @@
         mouse_right_click {
             bindings = <&mkp MB2>;
             key-positions = <31 32>;
+        };
+
+        scroll {
+            bindings = <&scroll_mode_activate>;
+            key-positions = <15 16>;
+        };
+
+        mouse_back {
+            bindings = <&mkp MB4>;
+            key-positions = <39 40>;
+        };
+
+        mouse_forward {
+            bindings = <&mkp MB5>;
+            key-positions = <42 43>;
         };
     };
 
