@@ -24,21 +24,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <50>;
         };
-
-        scroll_mode: scroll_mode {
-            compatible = "zmk,behavior-hold-tap";
-            label = "SCROLL_MODE";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <0>;
-            bindings = <&mo>, <&scroll_mode_activate>;
-        };
-
-        scroll_mode_activate: scroll_mode_activate {
-            compatible = "zmk,behavior-mouse-scroll";
-            label = "SCROLL_MODE_ACTIVATE";
-            #binding-cells = <0>;
-        };
     };
 
     combos {
@@ -52,11 +37,6 @@
         mouse_right_click {
             bindings = <&mkp MB2>;
             key-positions = <31 32>;
-        };
-
-        scroll {
-            bindings = <&scroll_mode_activate>;
-            key-positions = <15 16>;
         };
 
         mouse_back {
@@ -122,6 +102,19 @@
 &trans  &trans        &trans        &trans        &trans        &trans          &trans  &trans    &trans    &trans     &trans     &trans
 &trans  &trans        &trans        &kp LPAR      &kp RPAR      &trans          &trans  &kp LBKT  &kp RBKT  &kp MINUS  &kp EQUAL  &trans
 &trans  &trans        &trans        &trans        &trans        &trans          &trans  &trans
+            >;
+        };
+        layer_0 {
+            bindings = <
+                &mo _SCROLL   &kp KC_NO
+                &kp KC_NO     &kp KC_NO
+                &kp KC_NO     &kp KC_NO
+            >;
+        };
+
+        layer_1 {
+            bindings = <
+                &sensor_joystick_scroll
             >;
         };
     };
