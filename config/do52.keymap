@@ -109,18 +109,5 @@
 &trans  &trans        &trans        &trans        &trans        &trans          &trans  &trans
             >;
         };
-        layer_0 {
-            bindings = <
-                &mo _SCROLL   &kp KC_NO
-                &kp KC_NO     &kp KC_NO
-                &kp KC_NO     &kp KC_NO
-            >;
-        };
-
-        layer_1 {
-            bindings = <
-                &sensor_joystick_scroll
-            >;
-        };
     };
 };
