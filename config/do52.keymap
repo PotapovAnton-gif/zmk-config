@@ -49,7 +49,7 @@
         };
 
         mouse_forward {
-            bindings = <&sensor_joystick_scroll>;
+            bindings = <&scroll_mode>;
             key-positions = <42 43>;
         };
     };

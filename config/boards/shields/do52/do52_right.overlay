@@ -38,7 +38,7 @@
 
 		};
 	};
-    zip_xy_to_scroll_mapper: zip_xy_to_scroll_mapper {
+    scroll_mode: zip_xy_to_scroll_mapper {
         compatible = "zmk,code-mapper";
         map = <INPUT_REL_Y>, <INPUT_REL_WHEEL>,
               <INPUT_REL_X>, <INPUT_REL_HWHEEL>;
