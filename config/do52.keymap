@@ -6,7 +6,7 @@
 
 / {
     joystick_listener {
-        compatible = "zmk,analog-input";
+        compatible = "zmk,input-listener";
         device = <&joystick_split>;
 
         scroll {
