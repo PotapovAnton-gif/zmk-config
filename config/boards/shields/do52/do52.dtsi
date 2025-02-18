@@ -43,6 +43,7 @@
         compatible = "zmk,code-mapper";
         #input-processor-cells = <0>;
         #binding-cells = <0>; 
+        layers = <1>
         type = <INPUT_EV_REL>;
         map = <INPUT_REL_Y INPUT_REL_WHEEL>
             , <INPUT_REL_X INPUT_REL_HWHEEL>
