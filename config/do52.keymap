@@ -10,7 +10,7 @@
         device = <&joystick_split>;
 
         scroll {
-            layers = <MOUSE_LAYER>;
+            layers = 1;
             input-processors = <&zip_xy_to_scroll_mapper>;
         };
     };
