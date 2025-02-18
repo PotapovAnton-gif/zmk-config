@@ -10,7 +10,8 @@
         device = <&joystick_split>;
 
         scroll {
-            layers = 1;
+            compatible = "zmk,behavior-mapper"; 
+            layers = <MOUSE_LAYER>;
             input-processors = <&zip_xy_to_scroll_mapper>;
         };
     };
