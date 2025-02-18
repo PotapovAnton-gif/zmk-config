@@ -6,6 +6,14 @@
 
 
 / {
+    joystick_listener {
+        compatible = "zmk,analog-input";
+        device = <&joystick_split>;
+
+        scroll {
+            layers = <mouse>;
+        }
+    }
     behaviors {
         fn: fn {
             compatible = "zmk,behavior-hold-tap";
@@ -105,6 +113,14 @@
 &trans  &trans        &trans        &kp LPAR      &kp RPAR      &trans          &trans  &kp LBKT  &kp RBKT  &kp MINUS  &kp EQUAL  &trans
 &trans  &trans        &trans        &trans        &trans        &trans          &trans  &trans
             >;
+        };
+        mouse {
+            bindings = <
+&trans  &trans        &trans        &trans        &trans        &trans           &trans  &trans    &trans    &trans     &trans    &trans 
+&trans  &trans        &trans        &trans        &trans        &trans          &trans  &trans    &trans    &trans     &trans     &trans
+&trans  &trans        &trans         &trans        &trans      &trans          &trans  &trans    &trans  &trans    &trans  &trans
+&trans  &trans        &trans        &trans        &trans        &trans          &trans  &trans
+>;
         };
     };
 };

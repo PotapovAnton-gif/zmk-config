@@ -1,5 +1,9 @@
 #include "do52.dtsi"
 
+&joystick_split {
+    status = "disabled";
+}
+
 &kscan0 {
     col-gpios
         = <&pro_micro 0 GPIO_ACTIVE_HIGH>
