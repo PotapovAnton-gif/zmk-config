@@ -3,15 +3,15 @@
 
 &adc {
     status = "okay";
-}
+};
 
 &joystick {
     status = "okay";
-}
+};
 
 &joystick_split {
     device = <&joystick>;
-}
+};
 
 &default_transform { 
     col-offset = <6>;
