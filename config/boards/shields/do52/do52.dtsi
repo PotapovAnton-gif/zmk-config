@@ -40,7 +40,7 @@
 		};
 	};
 
-    
+
 
     chosen {
         zmk,kscan = &kscan0;
@@ -78,5 +78,11 @@ RC(4,0) RC(4,1)                 RC(4,4) RC(4,5)                 RC(4,6) RC(4,7) 
             , <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row D from the schematic file
             ;
 
+    };
+    split_inputs {
+        joystick_split: joystick_split@0 {
+            compatible = "zmk,input-split";
+            reg = <0>;
+        };
     };
 };
